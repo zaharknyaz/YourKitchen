@@ -46,33 +46,33 @@ extension Question {
     static func getQuestions() -> [Question] {
         [
             Question(
-                title: "Какую пищу предпочитаете?",
-                responseType: .single,
-                answers: [
-                    Answer(title: "Стейк", dish: .borsch),
-                    Answer(title: "Рыба", dish: .friedegg),
-                    Answer(title: "Морковь", dish: .cheesecakes),
-                    Answer(title: "Кукуруза", dish: .mashedpotatoes)
-                ]
-            ),
-            Question(
-                title: "Что вам нравиться больше?",
+                title: "Какие продукты у Вас есть?",
                 responseType: .multiple,
                 answers: [
-                    Answer(title: "Плавать", dish: .borsch),
-                    Answer(title: "Спать", dish: .friedegg),
-                    Answer(title: "Обниматься", dish: .cheesecakes),
-                    Answer(title: "Есть", dish: .mashedpotatoes)
+                    Answer(title: "Мясо", dish: .borsch),
+                    Answer(title: "Куриные яйца", dish: .friedegg),
+                    Answer(title: "Творог", dish: .cheesecakes),
+                    Answer(title: "Картофель", dish: .mashedpotatoes)
                 ]
             ),
             Question(
-                title: "Любите ли вы поездки на машине?",
+                title: "На чем Вы будете готовить?",
+                responseType: .single,
+                answers: [
+                    Answer(title: "Газовая плита", dish: .borsch),
+                    Answer(title: "Духовка", dish: .friedegg),
+                    Answer(title: "Микроволновка", dish: .cheesecakes),
+                    Answer(title: "Миксер", dish: .mashedpotatoes)
+                ]
+            ),
+            Question(
+                title: "Выберите время готовки",
                 responseType: .ranged,
                 answers: [
-                    Answer(title: "Ненавижу", dish: .friedegg),
-                    Answer(title: "Нервничаю", dish: .cheesecakes),
-                    Answer(title: "Не замечаю", dish: .mashedpotatoes),
-                    Answer(title: "Обожаю", dish: .borsch)
+                    Answer(title: "5 минут", dish: .friedegg),
+                    Answer(title: "10 минут", dish: .cheesecakes),
+                    Answer(title: "30 минут", dish: .mashedpotatoes),
+                    Answer(title: "1 час", dish: .borsch)
                 ]
             )
         ]
