@@ -53,57 +53,57 @@ enum Dish: String {
     var definition: String {
         switch self {
         case .borschsoup:
-            return "Рецепт супа борщ"
+            return "Тут должен быть Рецепт супа борщ..."
         case .vegetablesoup:
-            return "Рецепт супа овощной"
+            return "Тут должен быть Рецепт супа овощной..."
         case .tomyamsoup:
-            return "Рецепт супа том ям"
+            return "Тут должен быть Рецепт супа том ям..."
         case .mushroomsoup:
-            return "Рецепт супа грибной"
+            return "Тут должен быть Рецепт супа грибной..."
         case .uhasoup:
-            return "Рецепт супа уха"
+            return "Тут должен быть Рецепт супа уха..."
         case .okroshkasoup:
-            return "Рецепт окрошки"
+            return "Тут должен быть Рецепт окрошки..."
         case .pastapoflotski:
-            return "Рецепт макарон по-флотски"
+            return "Тут должен быть Рецепт макарон по-флотски..."
         case .chickenpilaf:
-            return "Рецепт плов из курицы"
+            return "Тут должен быть Рецепт плов из курицы..."
         case .buckwheatporridge:
-            return "Рецепт гречневой каши с грибами"
+            return "Тут должен быть Рецепт гречневой каши с грибами..."
         case .semolinaporridge:
-            return "Рецепт манной каши"
+            return "Тут должен быть Рецепт манной каши..."
         case .speltporridge:
-            return "Рецепт каши из Полбы"
+            return "Тут должен быть Рецепт каши из Полбы..."
         case .friedegg:
-            return "Рецепт яичницы"
+            return "Тут должен быть Рецепт яичницы..."
         case .omelet:
-            return "Рецепт омлета"
+            return "Тут должен быть Рецепт омлета..."
         case .pashotegg:
-            return "Рецепт яйца пашот"
+            return "Тут должен быть Рецепт яйца пашот..."
         case .cheesecakes:
-            return "Рецепт сырников"
+            return "Тут должен быть Рецепт сырников..."
         case .mashedpotatoes:
-            return "Рецепт картофельного пюре"
+            return "Тут должен быть Рецепт картофельного пюре..."
         case .meatball:
-            return "Рецепт котлет"
+            return "Тут должен быть Рецепт котлет..."
         case .caesarsalad:
-            return "Рецепт салата цезарь"
+            return "Тут должен быть Рецепт салата цезарь..."
         case .oliviersalad:
-            return "Рецепт салата оливье"
+            return "Тут должен быть Рецепт салата оливье..."
         case .herringunderafurcoatsalad:
-            return "Рецепт салата селедка под шубой"
+            return "Тут должен быть Рецепт салата селедка под шубой..."
         case .capercaillienestsalad:
-            return "Рецепт салата гнездо глухаря"
+            return "Тут должен быть Рецепт салата гнездо глухаря..."
         case .crabsalad:
-            return "Рецепт крабового салата"
+            return "Тут должен быть Рецепт крабового салата..."
         case .greeksalad:
-            return "Рецепт греческого салата"
+            return "Тут должен быть Рецепт греческого салата..."
         case .mimosasalad:
-            return "Рецепт салата мимоза"
+            return "Тут должен быть Рецепт салата мимоза..."
         case .applecompote:
-            return "Рецепт яблочного компота"
+            return "Тут должен быть Рецепт яблочного компота..."
         case .charlottepie:
-            return "Рецепт пирога шарлотка"
+            return "Тут должен быть Рецепт пирога шарлотка..."
         }
     }
 }
