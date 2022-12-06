@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
-
-    @IBOutlet var animalTypeLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    
+class ResultViewController: UITableViewController {
     
     var answers: [Answer]!
+    var mostFrequencyDishes: [Dish]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +18,32 @@ class ResultViewController: UIViewController {
         navigationItem.hidesBackButton = true
         updateResult()
     }
-   
+    
+    // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        mostFrequencyDishes.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellDish = tableView.dequeueReusableCell(withIdentifier: "cellDish", for: indexPath)
+        let dishToChoose = mostFrequencyDishes[indexPath]
+        var content = cellDish.defaultContentConfiguration()
+        content.text = "\(dishToChoose)"
+        cellDish.contentConfiguration = content
+        return cellDish
+    }
+
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.dismiss(animated: true)
     }
     
 }
+
 // MARK: - Private Methods
 extension ResultViewController {
     private func updateResult() {
+        
         var frequencyOfDishes: [Dish: Int] = [:]
         let dishes = answers.map { $0.dish }
         
@@ -43,33 +57,15 @@ extension ResultViewController {
 
         let sortedFrequencyOfDishes = frequencyOfDishes.sorted { $0.value > $1.value }
         
-        
         guard let mostFrequencyDish = sortedFrequencyOfDishes.first?.key else { return }
-        
         guard let mostFrequencyDishesValue = sortedFrequencyOfDishes.first?.value else { return }
     
-        // результативный массив
-        // его передать в функцию для вывода таблицы на экран
-        var mostFrequencyDishes = [mostFrequencyDish]
-        
+        mostFrequencyDishes = [mostFrequencyDish]
+
         for sortedFrequencyOfDish in sortedFrequencyOfDishes {
             if sortedFrequencyOfDish.value == mostFrequencyDishesValue && sortedFrequencyOfDish.key != mostFrequencyDish {
                 mostFrequencyDishes.append(sortedFrequencyOfDish.key)
             }
         }
-//        проверка результативного массива/вывод в консоль
-//        for dish in mostFrequencyDishes {
-//            print(dish)
-//        }
-        
-        updateUI(with: mostFrequencyDish)
     }
-    
-    private func updateUI(with dish: Dish?) {
-        animalTypeLabel.text = "Вы - \(dish?.rawValue ?? "")!"
-        descriptionLabel.text = dish?.definition ?? ""
-    }
-    
-
-
 }
