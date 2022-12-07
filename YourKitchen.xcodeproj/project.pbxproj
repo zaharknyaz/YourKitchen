@@ -113,14 +113,6 @@
 			path = Resourses;
 			sourceTree = "<group>";
 		};
-		3AC97EDB293B82EF00091034 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3AC97ED9293B821100091034 /* Question.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
