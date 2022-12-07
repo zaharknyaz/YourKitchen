@@ -46,14 +46,21 @@ extension ResultViewController {
     private func updateResult() {
         
         var frequencyOfDishes: [Dish: Int] = [:]
-        let dishes = answers.map { $0.dish }
+        let dishesInDishes = answers.map { $0.dish }
+        var allAnswerDishes: [Dish] = []
         
-        for dish in dishes {
-            /*if let dishTypeCount = frequencyOfDishes[dish] {
+        for dishes in dishesInDishes {
+            for dish in dishes {
+                allAnswerDishes.append(dish)
+            }
+        }
+        
+        for dish in allAnswerDishes {
+            if let dishTypeCount = frequencyOfDishes[dish] {
                 frequencyOfDishes.updateValue(dishTypeCount + 1, forKey: dish)
             } else {
                 frequencyOfDishes[dish] = 1
-            }*/
+            }
         }
 
         let sortedFrequencyOfDishes = frequencyOfDishes.sorted { $0.value > $1.value }
