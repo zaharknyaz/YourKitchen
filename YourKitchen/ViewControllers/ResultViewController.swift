@@ -27,17 +27,16 @@ class ResultViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellDish = tableView.dequeueReusableCell(withIdentifier: "cellDish", for: indexPath)
-        //let dishToChoose = mostFrequencyDishes[indexPath]
-        let dishToChoose = ""
+        let dishToChoose = mostFrequencyDishes[indexPath.row]
         var content = cellDish.defaultContentConfiguration()
-        content.text = "\(dishToChoose)"
+        content.text = dishToChoose.definition
         cellDish.contentConfiguration = content
         return cellDish
     }
 
-    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
-        navigationController?.dismiss(animated: true)
-    }
+//    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+//        navigationController?.dismiss(animated: true)
+//    }
     
 }
 
